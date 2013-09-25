@@ -1,0 +1,48 @@
+#!/system/bin/sh
+echo "intellidemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo 162000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+echo 1512000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+echo "deadline" > /sys/block/mmcblk0/queue/scheduler
+echo 1024 > /sys/block/mmcblk0/queue/read_ahead_kb
+echo 1 > /sys/kernel/fast_charge/force_fast_charge
+
+# set voltages
+echo 162000 700000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 270000 725000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 378000 750000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 384000 750000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 432000 775000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 486000 775000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 540000 800000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 594000 800000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 648000 825000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 702000 825000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 756000 875000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 810000 875000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 864000 900000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 918000 900000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 972000 925000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1026000 925000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1080000 975000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1134000 975000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1188000 1000000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1242000 1000000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1296000 1025000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1350000 1025000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1404000 1037500 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1458000 1037500 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+echo 1512000 1050000 > /sys/devices/system/cpu/cpufreq/vdd_table/vdd_levels
+
+echo 45 45 > /sys/kernel/sound_control/gpl_headphone_gain
+echo 45 45 > /sys/kernel/sound_control/gpl_headphone_pa_gain
+echo 45 > /sys/kernel/sound_control/gpl_speaker_gain
+
+#Retrieve baseband info
+#setprop gsm.version.baseband `strings /dev/block/platform/msm_sdcc.1/by-name/modem | grep M9615A-C | head -1` &
+ 
+ 
+ 
+ 
+ 
+ 
+ 
